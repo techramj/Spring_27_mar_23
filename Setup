@@ -1,6 +1,24 @@
+step 1: download maven 
+url: https://maven.apache.org/download.cgi
+download:Binary zip archive
+download link: https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.zip
+
+extract the zip file and save it in c drive.
+
+maven home: C:\apache-maven-3.8.4
+
+step 2: set up in system enviroment variable
+M2_HOME=<path of maven folder (parent of bin folder)>
+
+
+
+step 3: open <command/>
+check whether the maven setup is correct
+cmd mvn -version
+
 
 create the maven project and add the below dependencies.
-Note: copy code from line 12 to line 42.
+Note: copy code from line 30 to line 60.
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
