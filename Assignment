@@ -1,0 +1,41 @@
+   
+<bean name="emp" class="com.easylearning.bean.Employee" >
+</bean>
+
+<bean name="address" class="com.easylearning.bean.Address" >
+</bean>
+
+
+two object of emp using bean. compare the employee with ==
+emp1.getAddress() == emp2.getAddress()
+   
+ -------------------------------------------------------------------------------- 
+<bean name="emp" class="com.easylearning.bean.Employee" scope="prototype">
+</bean>
+
+<bean name="address" class="com.easylearning.bean.Address" scope="prototype">
+</bean>
+
+two object of emp using bean. compare the employee with ==
+emp1.getAddress() == emp2.getAddress()
+
+
+ -------------------------------------------------------------------------------- 
+<bean name="emp" class="com.easylearning.bean.Employee" scope="prototype">
+</bean>
+
+<bean name="address" class="com.easylearning.bean.Address" scope="singleton">
+</bean>
+
+two object of emp using bean. compare the employee with ==
+emp1.getAddress() == emp2.getAddress()
+
+ -------------------------------------------------------------------------------- 
+<bean name="emp" class="com.easylearning.bean.Employee" scope="singleton">
+</bean>
+
+<bean name="address" class="com.easylearning.bean.Address" scope="prototype">
+</bean>
+
+two object of emp using bean. compare the employee with ==
+emp1.getAddress() == emp2.getAddress()
