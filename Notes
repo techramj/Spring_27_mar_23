@@ -1,0 +1,55 @@
+
+Difference between BeanFactory vs Application context
+
+BeanFactory
+1.it can be used in small standalone application;
+2. BeanFactory don't support annotation
+3. It don't support internalization(i8n)
+4. BeanFactory support lazy loading of a bean
+
+
+
+ApplicationContext
+1. it can be used in web application. AOP, ORM
+2. It support both xml and annotation
+3. It support internalization(i8n)
+4. BeanFacoty support lazy loading of a bean
+
+
+Lifecycle:
+  Servlet
+    instantiation
+    init
+	service
+	destroy
+	
+   JSP:
+     translation
+	 compilation
+	 loading
+	 instantiation
+     jspInit
+	 jspService
+	 jspDestroy
+	 
+  
+
+Lifecycle  of spring bean
+
+<bean name="emp" class="com.easylearning.bean.Employee" lazy-init="true">
+</bean>
+
+1. instantiation
+2. populate properties
+3. BeanNameAware's  setBeanName
+4. ApplicationContextAware setApplicationContext 
+5. BeanPostProcessor postProcessBeforeInitialization 
+5. Initalizing bean afterPropertiesSet
+6. custom init
+7. BeanPostProcessor postProcessAfterInitialization
+
+spring is ready to use
+
+8. Disposable bean destory
+9. Employee custom destroy
+
