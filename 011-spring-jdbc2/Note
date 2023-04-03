@@ -1,0 +1,11 @@
+Main
+   EmpService => EmployeeSeriveImpl
+   				 //@Qualifier("employeeDaoImplWithJdbcTemplate");
+                 @Autowired
+                 private EmployeeDao empDao;
+                 
+                 
+                 EmployeeDao => EmployeeDaoImplWithConnection
+                                @Primary
+                             => EmployeeDaoImplWithJdbcTemplate
+                            
