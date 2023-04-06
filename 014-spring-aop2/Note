@@ -1,0 +1,17 @@
+4.2. Aspect
+An aspect is a modularization of a concern that cuts across multiple classes. 
+logging can be an example of such cross-cutting concern.
+transaction
+
+Joinpoint: where you can apply
+
+
+Pointcut : where you have applied
+
+
+
+Advice:
+before
+after
+around
+
