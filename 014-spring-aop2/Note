@@ -10,8 +10,22 @@ Pointcut : where you have applied
 
 
 
+
 Advice:
 before
 after
 around
+
+
+Weaving: 
+
+
+
+LoanService       ---------------->  LoanServiceProxy extends LogService
+     issueLoan()                     before
+                                      super.issueLoan();
+                                    
+                                    after
+
+
 

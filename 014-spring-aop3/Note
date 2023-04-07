@@ -1,0 +1,23 @@
+step 1: add the aspectJ dependency
+
+
+step 2: create the aspect and provide the pointcut
+
+
+
+adivce mention the pointcut
+
+@Before
+@After
+@AfterThrowing
+@AfterReturning
+@Around => combination of before and after
+
+case 1: when no execption throw from a method.
+After
+AfterReturning
+
+case 2: when exception is thrown from a method
+After
+AfterThrowing
+
