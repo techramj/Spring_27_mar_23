@@ -201,6 +201,34 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
   </servlet>
     
    ------------------------------------------------------------------------------------------------------------------- 
+step 7: Enables the Handler mapping => annotation-based then add the below line in spring config file.
+	<mvc:annotation-driven />
+	
+	if you want to refer others handler mapping. Please go through link: 
+	https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch16s04.html#:~:text=Spring's%20handler%20mapping%20mechanism%20has,springframework.
+	
+step 8: add componenet scan from the  package where you want to scan
+        <context:component-scan base-package="com.seed" />
+	
+step 9: create the controller as below
 
+package com.seed.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+	
+	
+	@RequestMapping(path = "/login")
+	public String login() {
+		return "loginSuccess";
+	}
+
+}
+
+step 10: create the view folder and add loginSuccess.jsp
+ 	 path=/WEB-INF/views
 
 
