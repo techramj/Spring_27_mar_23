@@ -146,6 +146,20 @@ step 3: add the dependencies:
 
 
 
+step 4: right click on pom.xml file -> maven -> update project
+
+step 5: configure the front controller i.e dispatcher servlet. Add the below code snippet in web.xml
+
+   <servlet>
+  	<servlet-name>spring</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+ 
+  <servlet-mapping>
+  	<servlet-name>spring</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping> 
 
         
 
